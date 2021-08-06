@@ -1,0 +1,20 @@
+- name: Update system
+  shell: apt-get update
+- name: Install python3.8
+  shell: apt -y install python3.8
+- name: Install distutils
+  shell: apt -y install python3.8-distutils
+- name: Download python pip3
+  shell: wget https://bootstrap.pypa.io/get-pip.py
+- name: Install pip3
+  shell: python3.8 get-pip.py
+#- name: Install tensorflow
+#  shell: pip install tensorflow
+- name: Install dnspython
+  shell: pip3.8 install dnspython
+- name: Install seaborn
+  shell: pip3.8 install seaborn
+- name: Install networkx
+  shell: pip3.8 install networkx
+- name: Install pandas
+  shell: pip3.8 install pandas

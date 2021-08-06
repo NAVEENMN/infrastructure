@@ -1,0 +1,12 @@
+---
+- hosts: webserver
+  become: yes
+  gather_facts: true
+  vars:
+    home_dir: /home/ubuntu/home
+  vars_files:
+    - vars/variables
+  environment:
+    FLASK_APP: "{{ home_dir }}/app.py"
+  tasks:
+    - include_tasks: tasks/setup.yml
